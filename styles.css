@@ -9,12 +9,14 @@ a:link{
     color:darkgreen;
 }
 
-a:hover{
-    color:rgb(0, 255, 149);
-}
+
 
 a:visited{
-    color:darkgreen;
+  color:darkgreen;
+}
+
+a:hover{
+  color:rgb(32, 238, 152);
 }
 
 body{
@@ -27,7 +29,35 @@ p{
   padding-left:15px;
   padding-top:10px;
   font-size:1.2rem;
-  color:chartreuse;
+  color:rgb(32, 238, 152);
+  word-wrap: normal;
+  word-break:normal;
+}
+
+td,.tdlink{
+  background-color:rgb(22, 31, 41);
+  color:rgb(171, 248, 84);
+  text-align: center;
+  
+}
+
+input[type=text]{
+  background-color:black;
+  color:lawngreen;
+  border-color:green;
+  border-style:double;
+  font-size:1.2rem;
+  font-family:'Courier New', Courier, monospace;
+  height:25px;
+}
+
+button{
+  background-color:black;
+  color:lawngreen;
+  border-color:green;
+  border-style:double;
+  font-size:1.4rem;
+  font-family:'Courier New', Courier, monospace;
 }
 
 .highlight{
@@ -37,9 +67,6 @@ p{
 .highlight2{
   color:rgb(173, 3, 3);
 }
-
-
-
 
 
 #grid-container{
@@ -54,7 +81,6 @@ p{
     
     font-family:'Courier New', Courier, monospace;
     color:darkgreen;
-
 }
 
 /* primary grid columns*/
@@ -63,14 +89,10 @@ p{
     
     grid-column: 1;
     width:150px;
-    
-
 }
 
-#main{
-    
+#main{    
     grid-column:2;
-
 }
 
 #imgR{
@@ -78,9 +100,6 @@ p{
     
     grid-column:3;
     width:150px;
-    
-
-
 }
 
 /* page content */
@@ -111,9 +130,8 @@ p{
     border-color:green;
     border-width:thick;
 
-    
-    word-wrap: break-word;
-    word-break: break-all;
+    word-wrap: normal;
+    word-break: normal;
 
 }
 
@@ -130,8 +148,32 @@ p{
     border-width:thick;
 }
 
+.centreText{
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  align-content: center;
+}
 
+.summaryBox{
+  border-style:double;
+  border-color:green;
+  border-width:thick;
+  width:80%;
+  margin:auto;
 
+}
+
+.summaryText{
+  display:block;
+  padding-left:10px;
+  padding-top:15px;
+  
+  color:lawngreen;
+  font-size:1.1rem;
+  
+  word-wrap:normal;
+}
 
 /* Animation stuff */
 
@@ -141,17 +183,11 @@ p{
   }
 
 .wrapper {
-    /* padding-top: 2rem;
-    padding-left: 1rem; */
-    display: inline-block;
-    white-space: nowrap;
-    
+    display: inline-block;  
   }
 
 .screen {
     background-color: rgb(0, 0, 0);
-    /* text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5),
-      -1px -1px rgba(0, 255, 255, 0.4); */
     position: relative;
     &:before,
     &:after {
@@ -335,12 +371,9 @@ p{
     }
   }
   .crt::after {
-
     animation: flicker 0.50s infinite;
   }
 
   .crt {
     animation: textShadow 1.6s infinite;
-
-    
   }
