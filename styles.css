@@ -60,6 +60,16 @@ button{
   font-family:'Courier New', Courier, monospace;
 }
 
+button:hover{
+  color:black;
+  background-color:lawngreen;
+  border-color:green;
+  border-style:double;
+  font-size:1.4rem;
+  font-family:'Courier New', Courier, monospace;
+  cursor:grab;
+}
+
 .highlight{
   color:rgb(0, 174, 255);
 }
