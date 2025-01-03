@@ -145,6 +145,24 @@ button:hover{
 
 }
 
+#contentStretchy{
+  background-color:rgb(0, 0, 0);
+
+  width:750px;
+  min-height:700px;
+  height:auto;
+
+  border-style: double;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-color:green;
+  border-width:thick;
+
+  word-wrap: normal;
+  word-break: normal;
+
+}
+
 #footer{
     background-color:rgb(0, 0, 0);
 
@@ -157,6 +175,7 @@ button:hover{
     border-color:green;
     border-width:thick;
 }
+
 
 .centreText{
   display:block;

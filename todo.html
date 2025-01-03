@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"  href="styles.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introvertices</title>
+    
+</head>
+<style>
+   
+    #taskToAdd{
+        font-size:1.1rem;
+        background-color: black;
+        color: lawngreen;
+        border:1px solid lawngreen;
+        border-radius:5px;
+    }
+    #submitButt{
+        font-size:1.2rem;
+        background-color: black;
+        color: lawngreen;
+        border:1px solid lawngreen;
+        border-radius:5px;
+    }
+
+    #submitButt:hover{
+        background-color: lawngreen;
+        color: black;
+    }
+    
+    #list-grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2 200px);  
+        grid-column-gap: 5px; 
+        width: auto;
+        min-height: 100px;   
+    }
+    
+    
+    
+    #todo{       
+        border: thick double green;
+        border-left: 0px;
+        border-right: 0px;
+        color: lawngreen;
+        min-height: 70px;
+        padding-top: 10px;
+    }
+    
+    
+    
+    #listH{
+        border: thick double green;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
+        height: 30px;
+        padding-top: 10px;
+    }
+    
+    .list-item{
+        background-color: rgb(24, 28, 36);
+        color:lawngreen;
+        border-radius: 5px 9px 9px 5px;
+        text-align:left;
+        padding-left: 10px;
+        margin:5px;
+        font-size: 1.2rem;      
+        line-height: 25px;
+    }
+    
+    .list-item > .list-close{
+        background-color: rgb(0, 42, 252);
+        color: white;
+        border: none;
+        border: 1px solid rgb(24, 28, 36);  
+        border-radius: 0px 5px 5px 0px;
+        height: 25px;
+        width: 30px;
+        float:right;
+        font-size: 1rem;
+    }
+    
+    .list-item > .list-close:hover{
+        background-color: red;
+        color: white;
+        border: none;
+        border: 1px solid rgb(24, 28, 36);
+        border-radius: 0px 5px 5px 0px;
+        height: 25px;
+        width: 30px;
+        float:right;
+    }
+    
+    
+    </style>
+
+<body>
+    <main class="screen">
+    <div id = "grid-container" class="wrapper crt">
+
+
+        <!-- grid column 1-->
+        <div id="imgL"></div>
+
+        <!-- grid column 2-->
+        <div id="main">
+            <div id = "header">
+                <h1>> <a href="index.html" target="_self">hello</a>.<span class="cursor">_</span></h1>
+            </div>
+    
+            <div id = "contentStretchy" class="childframe">
+                <span class="centreText">
+                    <h2>Todo List</h2><br>
+                    <span class="highlight">Add a task below.</span> <br><br>
+
+                    <input id="taskToAdd" type="text" placeholder="task" size="60" maxlength="100">
+                    <button id="submitButt" type="button">Add</button>
+                    <br><br>
+            
+                    <div id="list-grid">
+                        
+                            <div id="listH"><span class="highlight">Get 'em done! :)</span></div>
+            
+                            <div id="todo">
+            
+            
+                            </div>
+            
+                    </div><br><br>
+                    
+                
+                    </span>
+
+                    <div class="summaryBox">
+                        <span class="summaryText">
+                        Summary:<br><br>
+                        I completed this as part of <a href="https://github.com/florinpop17/app-ideas" target="_blank">Florinpop17's App Ideas</a>.<br>
+                        This was the first intermediate project I approached. Tasks are added to an array and drawn into the list's innerHTML when added or removed.
+                        IDs are created from the array index for the buttons and items, so that I can remove them easily. I used what I had learnt from the Tic Tac Toe game to implement the close 
+                        buttons (by getting all of the buttons on the list, then checking the id and splicing that index out of the task array).<br><br>
+                        I did ensure I sanitised task input via DOMPurify as well, since my Regex approach from the palindrome check wouldn't work as needed here.<br><br>
+                        I didn't find this too tough to be honest - I've certainly seen more code-complex but feature-same solutions than mine when I went to compare what I'd done. 
+                        Overall happy and proud of what I made though!<br><br>
+                        
+                        </span>
+                    </div><br><br>
+            </div>
+
+        
+    
+            <div id = "footer">
+                <a href="https://github.com/introvertices" target="_blank"><h2>https://github.com/introvertices</h2></a>
+            </div>
+        </div>
+
+        <!--grid column 3-->
+        <div id="imgR"></div>
+
+
+    </div>
+    
+
+
+    
+
+
+    <script src = "./scripts/todo.js"></script>
+    <script>document.getElementById('submitButt').addEventListener('click', getInput)</script>
+    <script type="text/javascript" src="dist/purify.min.js"></script>
+    </main>
+</body>
+</html>
